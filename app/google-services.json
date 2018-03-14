@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "948257381712",
+    "firebase_url": "https://appcamarataquaritinga.firebaseio.com",
+    "project_id": "appcamarataquaritinga",
+    "storage_bucket": "appcamarataquaritinga.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948257381712:android:0766377818d4a65a",
+        "android_client_info": {
+          "package_name": "com.camarataquaritinga.projeto.camarataquaritinga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948257381712-tu18js842jqojrrh6dv01q5qc01ft9oo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.camarataquaritinga.projeto.camarataquaritinga",
+            "certificate_hash": "20d521b433d7973747f33318ec4ff552a287fb50"
+          }
+        },
+        {
+          "client_id": "948257381712-2qccu8t06pahcorl1md5cj0nbtbok3er.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJBsKEQLcOrBK5Q_Z8L_K6d8QDl2diQ8w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948257381712-2qccu8t06pahcorl1md5cj0nbtbok3er.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
