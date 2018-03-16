@@ -7,5 +7,9 @@
     <string name="fb_login_protocol_scheme">fb1973570966237657</string>
     <string name="login_facebook">Entrar com Facebook</string>
     <string name="botao_de_cadastro">Cadastre-se</string>
+    <string name="item_configuracoes">Configurações</string>
+    <string name="item_sair">Sair</string>
+    <string name="enviar">Enviar</string>
+
 
 </resources>

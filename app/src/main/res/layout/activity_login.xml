@@ -49,9 +49,11 @@
         android:layout_height="wrap_content"
         android:text="@string/botao_login_entrar"
         android:id="@+id/bt_login"
+        android:theme="@style/botaoPadrao"
         android:layout_below="@+id/edit_login_senha"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="#ffffff" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
 
     <com.facebook.login.widget.LoginButton
         android.layout_width="match_parent"
@@ -74,7 +76,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_login"
         android:onClick="abrirCadastroUsuario"
-        android:backgroundTint="#ffffff" />
+        android:theme="@style/botaoPadrao" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -94,5 +96,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/streamlogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Esqueceu a senha?"
+        android:id="@+id/text_recupera_senha"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/edit_login_senha"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

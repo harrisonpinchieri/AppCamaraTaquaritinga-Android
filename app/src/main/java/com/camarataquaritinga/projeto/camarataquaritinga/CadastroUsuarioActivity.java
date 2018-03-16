@@ -68,7 +68,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                @Override
                public void onComplete(@NonNull Task<AuthResult> task) {
                    if (task.isSuccessful()) {
-                       Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(CadastroUsuarioActivity.this, "Verifique o seu e-mail", Toast.LENGTH_SHORT).show();
 
                        FirebaseUser usuarioFireBase = task.getResult().getUser();
                        usuario.setId(usuarioFireBase.getUid() );
@@ -76,7 +76,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
                        autenticacao.signOut();
                        finish();
-
+                       enviarEmailVerificacao();
 
                    } else {
 
@@ -113,6 +113,11 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    private void enviarEmailVerificacao() {
+
+        autenticacao.getCurrentUser();
     }
 
 }

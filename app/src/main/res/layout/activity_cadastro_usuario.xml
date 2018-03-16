@@ -74,6 +74,7 @@
         android:id="@+id/bt_cadastrar"
         android:layout_below="@+id/edit_cadastro_senha2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:theme="@style/botaoPadrao"/>
 
 </RelativeLayout>
