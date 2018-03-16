@@ -74,9 +74,9 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                        usuario.setId(usuarioFireBase.getUid() );
                        usuario.salvar();
 
-                       autenticacao.signOut();
-                       finish();
+                       //autenticacao.signOut();
                        enviarEmailVerificacao();
+                       finish();
 
                    } else {
 
@@ -117,7 +117,29 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
     private void enviarEmailVerificacao() {
 
-        autenticacao.getCurrentUser();
+       FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+
+
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
+                }else{
+
+                    overridePendingTransition(0,0);
+                    finish();
+                    overridePendingTransition(0,0);
+                    startActivity(getIntent());
+                }
+            }
+        });
+    }
+
+    private void alert(String s) {
+
+        Toast.makeText(CadastroUsuarioActivity.this, s, Toast.LENGTH_SHORT).show();
     }
 
 }

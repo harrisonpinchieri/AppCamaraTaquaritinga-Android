@@ -26,6 +26,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 
 public class LoginActivity extends AppCompatActivity {
@@ -251,8 +252,8 @@ public class LoginActivity extends AppCompatActivity {
                     //se deu certo a autenticação de login do usuário
                     if (task.isSuccessful()) {
 
-                        Toast.makeText(LoginActivity.this, "Sucesso ao fazer login", Toast.LENGTH_SHORT).show();
-                        abrirTelaPrincipal();
+                        checarEmailVerificado();
+
                     } else {
 
                         String erroExcecao = "";
@@ -278,9 +279,18 @@ public class LoginActivity extends AppCompatActivity {
 
         }
 
+    private void checarEmailVerificado() {
+        FirebaseUser user =  FirebaseAuth.getInstance().getCurrentUser();
+        if(user.isEmailVerified()){
+            Toast.makeText(LoginActivity.this, "Sucesso ao fazer login", Toast.LENGTH_SHORT).show();
+            abrirTelaPrincipal();
+        }else{
 
+            FirebaseAuth.getInstance().signOut();
+            alert("Você ainda não verificou o seu e-mail");
 
-
+        }
+    }
 
 
     private void abrirTelaPrincipal(){
