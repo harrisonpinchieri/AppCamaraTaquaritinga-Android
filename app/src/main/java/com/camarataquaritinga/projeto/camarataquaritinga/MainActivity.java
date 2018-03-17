@@ -2,6 +2,8 @@ package com.camarataquaritinga.projeto.camarataquaritinga;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.MenuPopupWindow;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +13,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import com.camarataquaritinga.projeto.camarataquaritinga.Config.ConfiguracaoFirebase;
+import com.camarataquaritinga.projeto.camarataquaritinga.adapter.TabsAdapter;
+import com.camarataquaritinga.projeto.camarataquaritinga.util.SlidingTabLayout;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -20,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth autenticacao;
     private Toolbar toolbar;
     private MenuPopupWindow.MenuDropDownListView menu;
+    private SlidingTabLayout slidingTabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,20 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("Câmara Taquaritinga");
 
         setSupportActionBar(toolbar);
+
+        //Configura abas
+        slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tab_main);
+        viewPager =(ViewPager) findViewById(R.id.view_pager_main);
+
+
+
+        //configurar adapter
+        TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager(),this);
+        viewPager.setAdapter(tabsAdapter);
+        slidingTabLayout.setCustomTabView(R.layout.tab_view,R.id.text_item_tab);
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this,R.color.branco));
+        slidingTabLayout.setViewPager(viewPager);
 
 
 
@@ -58,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_sair:
                 logout();
                 return true;
-            case R.id.item_configuracoes:
+            case R.id.item_Sobre:
+
+
                return true;
             default:
                 return super.onOptionsItemSelected(item);
