@@ -121,11 +121,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 usuario =new Usuario();
 
-                if(email.getText().length() == 0 )  {
+                if(email.getText().toString().isEmpty() )  {
 
                     alert("Digite seu e-mail.");
 
-                }else if(senha.getText().length() ==0){
+                }else if(senha.getText().toString().isEmpty() ){
 
                     alert("Digite sua senha.");
 
@@ -134,6 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                     usuario.setEmail(email.getText().toString());
                     usuario.setSenha1(senha.getText().toString());
                     validarLogin();
+
                 }
 
 
@@ -191,6 +192,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             Intent i = new Intent(LoginActivity.this,MainActivity.class);
                             startActivity(i);
+                            finish();
                         }else{
 
                             alert("Erro de autenticação com o Firebase");
@@ -277,6 +279,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
 
+
+
         }
 
     private void checarEmailVerificado() {
@@ -284,6 +288,7 @@ public class LoginActivity extends AppCompatActivity {
         if(user.isEmailVerified()){
             Toast.makeText(LoginActivity.this, "Sucesso ao fazer login", Toast.LENGTH_SHORT).show();
             abrirTelaPrincipal();
+
         }else{
 
             FirebaseAuth.getInstance().signOut();

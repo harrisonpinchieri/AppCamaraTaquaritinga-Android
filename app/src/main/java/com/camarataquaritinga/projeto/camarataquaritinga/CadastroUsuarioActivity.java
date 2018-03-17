@@ -58,60 +58,67 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
     private void cadastrarUsuario(){
 
-       if(usuario.getSenha1().toString().equals(usuario.getSenha2().toString())){
+        if(nome.getText().toString().isEmpty() || email.getText().toString().isEmpty() || senha1.getText().toString().isEmpty() || senha2.getText().toString().isEmpty()){
 
-           autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-           autenticacao.createUserWithEmailAndPassword(
-                   usuario.getEmail(),
-                   usuario.getSenha1()
-           ).addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
-               @Override
-               public void onComplete(@NonNull Task<AuthResult> task) {
-                   if (task.isSuccessful()) {
-                       Toast.makeText(CadastroUsuarioActivity.this, "Verifique o seu e-mail", Toast.LENGTH_SHORT).show();
+            alert("Por favor, preencha todos os campos!");
 
-                       FirebaseUser usuarioFireBase = task.getResult().getUser();
-                       usuario.setId(usuarioFireBase.getUid() );
-                       usuario.salvar();
-
-                       //autenticacao.signOut();
-                       enviarEmailVerificacao();
-                       finish();
-
-                   } else {
-
-                       String erroExcecao = "";
-
-                       try{
-                           throw  task.getException();
-                       } catch (FirebaseAuthWeakPasswordException e) {
-                           erroExcecao = "Digite uma senha mais forte, contendo mais caracteres e com letras e números!";
-                       } catch (FirebaseAuthInvalidCredentialsException e) {
-                           erroExcecao = "O e-mail digitado é invalido,digite novamente seu e-mail!";
-
-                       } catch (FirebaseAuthUserCollisionException e) {
-                           erroExcecao = "O e-mail já está em uso no App!";
-
-                       } catch (Exception e) {
-                           erroExcecao = "Erro ao efetuar o cadastro!";
-
-                           e.printStackTrace();
-                       }
-
-                       Toast.makeText(CadastroUsuarioActivity.this, "Erro "+erroExcecao, Toast.LENGTH_SHORT).show();
+        }else {
 
 
+            if (usuario.getSenha1().toString().equals(usuario.getSenha2().toString())) {
 
 
+                autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+                autenticacao.createUserWithEmailAndPassword(
+                        usuario.getEmail(),
+                        usuario.getSenha1()
+                ).addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(CadastroUsuarioActivity.this, "Verifique o seu e-mail", Toast.LENGTH_SHORT).show();
 
-                   }
-               }
-           });
-        }else{
+                            FirebaseUser usuarioFireBase = task.getResult().getUser();
+                            usuario.setId(usuarioFireBase.getUid());
+                            usuario.salvar();
 
-            Toast.makeText(CadastroUsuarioActivity.this, "As senhas não condizem", Toast.LENGTH_SHORT).show();
+                            //autenticacao.signOut();
+                            enviarEmailVerificacao();
+                            finish();
+
+                        } else {
+
+                            String erroExcecao = "";
+
+                            try {
+                                throw task.getException();
+                            } catch (FirebaseAuthWeakPasswordException e) {
+                                erroExcecao = "Digite uma senha mais forte, contendo mais caracteres e com letras e números!";
+                            } catch (FirebaseAuthInvalidCredentialsException e) {
+                                erroExcecao = "O e-mail digitado é invalido,digite novamente seu e-mail!";
+
+                            } catch (FirebaseAuthUserCollisionException e) {
+                                erroExcecao = "O e-mail já está em uso no App!";
+
+                            } catch (Exception e) {
+                                erroExcecao = "Erro ao efetuar o cadastro!";
+
+                                e.printStackTrace();
+                            }
+
+                            Toast.makeText(CadastroUsuarioActivity.this, "Erro: " + erroExcecao, Toast.LENGTH_SHORT).show();
+
+
+                        }
+                    }
+                });
+            } else {
+
+                Toast.makeText(CadastroUsuarioActivity.this, "As senhas não condizem", Toast.LENGTH_SHORT).show();
+            }
+
+
         }
-
 
     }
 
