@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.MenuPopupWindow;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,13 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private Button botaoSair;
     private FirebaseAuth autenticacao;
     private Toolbar toolbar;
-    private MenuPopupWindow.MenuDropDownListView menu;
+  //  private MenuPopupWindow.MenuDropDownListView menu;
     private SlidingTabLayout slidingTabLayout;
     private ViewPager viewPager;
-
-    RecyclerView recyclerView;
-    RecyclerView.LayoutManager layoutManager;
-    RecyclerView.Adapter adapter;
 
 
 

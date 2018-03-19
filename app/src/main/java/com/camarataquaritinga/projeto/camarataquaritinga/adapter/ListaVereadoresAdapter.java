@@ -18,12 +18,12 @@ import java.util.ArrayList;
  */
 public class ListaVereadoresAdapter extends BaseAdapter {
 
-   ArrayList<SingleRow> list;
+    ArrayList<SingleRow> list;
 
     Context context;
-    ListaVereadoresAdapter(Context c){
+    public ListaVereadoresAdapter(Context c){
 
-        context=c;
+        context =c;
         list= new ArrayList<SingleRow>();
 
         Resources res = c.getResources();
@@ -32,15 +32,17 @@ public class ListaVereadoresAdapter extends BaseAdapter {
         String[] partido = res.getStringArray(R.array.Partido);
         String[] email = res.getStringArray(R.array.Email);
         int[] img ={R.drawable.item_presidente_1,R.drawable.item_vicepresidente_2,R.drawable.item_1secretario_3,R.drawable.item_2secretario_4,R.drawable.item_vereador_5,
-                    R.drawable.item_vereador_6,R.drawable.item_vereador_7,R.drawable.item_vereador_8,R.drawable.item_vereador_9,R.drawable.item_vereador_10,
-                    R.drawable.item_vereador_11,R.drawable.item_vereador_12,R.drawable.item_vereador_13,R.drawable.item_vereador_14,R.drawable.item_vereador_15};
+                R.drawable.item_vereador_6,R.drawable.item_vereador_7,R.drawable.item_vereador_8,R.drawable.item_vereador_9,R.drawable.item_vereador_10,
+                R.drawable.item_vereador_11,R.drawable.item_vereador_12,R.drawable.item_vereador_13,R.drawable.item_vereador_14,R.drawable.item_vereador_15};
 
         for(int i=0;i<15;i++){
 
-             list.add(new SingleRow(titulo[i],nome[i],partido[i],email[i],img[i]));
+            list.add(new SingleRow(titulo[i],nome[i],partido[i],email[i],img[i]));
         }
 
     }
+
+
 
     @Override
     public int getCount() {
@@ -62,22 +64,27 @@ public class ListaVereadoresAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
 
+
         LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = inflater.inflate(R.layout.list_row,viewGroup,false);
         TextView titulo = (TextView) row.findViewById(R.id.txt_Titulo);
         TextView nome = (TextView) row.findViewById(R.id.txt_Nome);
         TextView email = (TextView) row.findViewById(R.id.txt_Email);
+        TextView partido = (TextView) row.findViewById(R.id.txt_Partido);
         ImageView img = (ImageView)row.findViewById(R.id.img_FotoVereador);
 
-          SingleRow temp= list.get(i);
+        SingleRow temp= list.get(i);
 
         titulo.setText(temp.titulo);
         nome.setText(temp.nome);
         email.setText(temp.email);
+        partido.setText(temp.partido);
         img.setImageResource(temp.img);
 
         return row;
     }
+
+
 }
 
 class SingleRow{

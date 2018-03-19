@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+
+
 import com.camarataquaritinga.projeto.camarataquaritinga.R;
 import com.camarataquaritinga.projeto.camarataquaritinga.adapter.ListaVereadoresAdapter;
 
@@ -29,22 +31,10 @@ public class HomeFragment extends Fragment {
 
 
         list = (ListView) view.findViewById(R.id.listViewVereadoresId);
-        list.setAdapter(new ListaVereadoresAdapter(this));
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        list.setAdapter(new ListaVereadoresAdapter(getActivity()));
 
       /*  View view = inflater.inflate(R.layout.fragment_home,container,false);
 
@@ -72,10 +62,11 @@ public class HomeFragment extends Fragment {
 
       //  listView.setAdapter(listViewAdapter);
 
-       return inflater.inflate(R.layout.fragment_home, container, false);
-      //  return view;
+     //  return inflater.inflate(R.layout.fragment_home, container, false);
+        return view;
     }
 
 
 
 }
+
