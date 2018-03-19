@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.camarataquaritinga.projeto.camarataquaritinga.R;
 
@@ -62,9 +64,19 @@ public class ListaVereadoresAdapter extends BaseAdapter {
 
         LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = inflater.inflate(R.layout.list_row,viewGroup,false);
+        TextView titulo = (TextView) row.findViewById(R.id.txt_Titulo);
+        TextView nome = (TextView) row.findViewById(R.id.txt_Nome);
+        TextView email = (TextView) row.findViewById(R.id.txt_Email);
+        ImageView img = (ImageView)row.findViewById(R.id.img_FotoVereador);
 
+          SingleRow temp= list.get(i);
 
-        return null;
+        titulo.setText(temp.titulo);
+        nome.setText(temp.nome);
+        email.setText(temp.email);
+        img.setImageResource(temp.img);
+
+        return row;
     }
 }
 

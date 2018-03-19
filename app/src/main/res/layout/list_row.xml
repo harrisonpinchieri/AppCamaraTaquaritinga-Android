@@ -12,7 +12,7 @@
             android:layout_margin="10dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imageView2"
+            android:id="@+id/img_FotoVereador"
             android:layout_gravity="left|top"
             android:background="@drawable/item_presidente_1" />
 
@@ -21,21 +21,21 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Presidente"
-            android:id="@+id/textView3"
+            android:id="@+id/txt_Titulo"
             android:layout_gravity="center_horizontal|top"
-            android:layout_alignTop="@+id/imageView2"
-            android:layout_toRightOf="@+id/imageView2"
-            android:layout_toEndOf="@+id/imageView2" />
+            android:layout_alignTop="@+id/img_FotoVereador"
+            android:layout_toRightOf="@+id/img_FotoVereador"
+            android:layout_toEndOf="@+id/img_FotoVereador" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="José Rodrigo de Pietro"
-            android:id="@+id/textView4"
-            android:layout_below="@+id/textView3"
-            android:layout_alignLeft="@+id/textView3"
-            android:layout_alignStart="@+id/textView3"
+            android:id="@+id/txt_Nome"
+            android:layout_below="@+id/txt_Titulo"
+            android:layout_alignLeft="@+id/txt_Titulo"
+            android:layout_alignStart="@+id/txt_Titulo"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -45,27 +45,27 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Partido:"
             android:id="@+id/textView5"
-            android:layout_below="@+id/textView4"
-            android:layout_toRightOf="@+id/imageView2"
-            android:layout_toEndOf="@+id/imageView2" />
+            android:layout_below="@+id/txt_Nome"
+            android:layout_toRightOf="@+id/img_FotoVereador"
+            android:layout_toEndOf="@+id/img_FotoVereador" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="SD"
-            android:id="@+id/textView6"
-            android:layout_above="@+id/textView7"
+            android:id="@+id/txt_Partido"
+            android:layout_above="@+id/txt_Email"
             android:layout_toRightOf="@+id/textView5"
-            android:layout_alignRight="@+id/textView7"
-            android:layout_alignEnd="@+id/textView7" />
+            android:layout_alignRight="@+id/txt_Email"
+            android:layout_alignEnd="@+id/txt_Email" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="depietro@camarataquaritinga.sp.gov.br"
-            android:id="@+id/textView7"
+            android:id="@+id/txt_Email"
             android:layout_below="@+id/textView5"
             android:layout_alignLeft="@+id/textView5"
             android:layout_alignStart="@+id/textView5" />

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.camarataquaritinga.projeto.camarataquaritinga.R;
+import com.camarataquaritinga.projeto.camarataquaritinga.adapter.ListaVereadoresAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +29,7 @@ public class HomeFragment extends Fragment {
 
 
         list = (ListView) view.findViewById(R.id.listViewVereadoresId);
+        list.setAdapter(new ListaVereadoresAdapter(this));
 
 
 
