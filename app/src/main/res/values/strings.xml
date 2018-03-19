@@ -11,8 +11,94 @@
     <string name="enviar">Enviar</string>
     <string name="Sobre">Sobre</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Titulo">
+
+        <item>Presidente</item>
+        <item>Vice Presidente</item>
+        <item>1° Secretário</item>
+        <item>2° Secretário</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+        <item>Vereador</item>
+    </string-array>
+
+    <string-array name="Nome">
+
+        <item>José Rodrigo de Pietro</item>
+        <item>Marcos Rui Gomes Marona</item>
+        <item>Orides Previdelli Júnior</item>
+        <item>Caio Edivan Ribeiro Porto</item>
+        <item>Antonio Vidal da Silva</item>
+        <item>Claudemir Sebastião Basso</item>
+        <item>Denis Eduardo Machado</item>
+        <item>Eduardo Henrique Moutinho</item>
+        <item>Genésio Aparecido Valensio</item>
+        <item>Gilberto Junqueira</item>
+        <item>Ângelo Bartholomeu</item>
+        <item>Marcos Aparecido Lourençano</item>
+        <item>Aparecido Carlos Gonçalves</item>
+        <item>Oswado Peretti Neto</item>
+        <item>Valdecir Conceição Zacarias</item>
+
+    </string-array>
+
+    <string-array name="Partido">
+
+        <item>SD</item>
+        <item>DEM</item>
+        <item>SD</item>
+        <item>PSD</item>
+        <item>PPS</item>
+        <item>PP</item>
+        <item>PMDB</item>
+        <item>PSB</item>
+        <item>PRB</item>
+        <item>DEM</item>
+        <item>PP</item>
+        <item>MDB</item>
+        <item>PPS</item>
+        <item>PMDB</item>
+        <item>PSB</item>
+
+    </string-array>
+
+
+    <string-array name="Email">
+
+        <item>depietro@camarataquaritinga.sp.gov.br</item>
+        <item>bonilla@camarataquaritinga.sp.gov.br</item>
+        <item>juninhoprevidelli@camarataquaritinga.sp.gov.br</item>
+        <item>professorcaio@camarataquaritinga.sp.gov.br</item>
+        <item>antoniovidal@camarataquaritinga.sp.gov.br</item>
+        <item>mirao@camarataquariinga.sp.gov.br</item>
+        <item>denis@camarataquaritinga.sp.gov.br</item>
+        <item>moutinho@camarataquaritinga.sp.gov.br</item>
+        <item>genesio@camarataquaritinga.sp.gov.br</item>
+        <item>gilberto@camarataquaritinga.sp.gov.br</item>
+        <item>angelim@camarataquaritinga.sp.gov.br</item>
+        <item>lourencano@camarataquaritinga.sp.gov.br</item>
+        <item>cidobolivar@camarataquaritinga.sp.gov.br</item>
+        <item>wadinho@camarataquariinga.sp.gov.br</item>
+        <item>valcir@camarataquaritinga.sp.gov.br</item>
+
+
+    </string-array>
+
+
+
+
+
+
+
+
 
 
 </resources>

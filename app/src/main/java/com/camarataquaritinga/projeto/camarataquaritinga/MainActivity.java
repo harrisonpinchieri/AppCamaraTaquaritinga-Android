@@ -6,6 +6,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.MenuPopupWindow;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,6 +19,7 @@ import com.camarataquaritinga.projeto.camarataquaritinga.util.SlidingTabLayout;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private Button botaoSair;
@@ -26,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
     private MenuPopupWindow.MenuDropDownListView menu;
     private SlidingTabLayout slidingTabLayout;
     private ViewPager viewPager;
+
+    RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    RecyclerView.Adapter adapter;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this,R.color.branco));
         slidingTabLayout.setViewPager(viewPager);
+
+
+
+
+
 
 
 

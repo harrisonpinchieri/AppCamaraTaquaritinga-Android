@@ -33,7 +33,7 @@ public class TabsAdapter  extends FragmentStatePagerAdapter{
     }
 
     @Override
-    //ao pressionar o HOME, vai chamar o método getitem e esse método baseado na posição, iremos retornar o conteúdo da viewPager
+    //ao pressionar o HOME, vai chamar o método getitem e esse método baseado na posição, vai retornar o conteúdo da viewPager
     public Fragment getItem(int position) {
 
         Fragment fragment = null;
