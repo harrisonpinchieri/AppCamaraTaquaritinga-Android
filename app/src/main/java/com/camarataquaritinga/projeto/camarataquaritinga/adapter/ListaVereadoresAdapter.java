@@ -40,17 +40,20 @@ public class ListaVereadoresAdapter extends BaseAdapter {
             list.add(new SingleRow(titulo[i],nome[i],partido[i],email[i],img[i]));
         }
 
+
     }
 
 
 
     @Override
     public int getCount() {
+
         return list.size();
     }
 
     @Override
     public Object getItem(int i) {
+
         return list.get(i);
     }
 
@@ -61,7 +64,7 @@ public class ListaVereadoresAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
 
 
 
@@ -72,6 +75,7 @@ public class ListaVereadoresAdapter extends BaseAdapter {
         TextView email = (TextView) row.findViewById(R.id.txt_Email);
         TextView partido = (TextView) row.findViewById(R.id.txt_Partido);
         ImageView img = (ImageView)row.findViewById(R.id.img_FotoVereador);
+        TextView txt= (TextView)row.findViewById(R.id.txt_click);
 
         SingleRow temp= list.get(i);
 
@@ -80,8 +84,21 @@ public class ListaVereadoresAdapter extends BaseAdapter {
         email.setText(temp.email);
         partido.setText(temp.partido);
         img.setImageResource(temp.img);
+        txt.setText(temp.txt);
+
+
+
+
+
+
+
+
+
+
 
         return row;
+
+
     }
 
 
@@ -94,6 +111,7 @@ class SingleRow{
     String nome;
     String partido;
     String email;
+    String txt;
 
     SingleRow(String titulo,String nome,String partido,String email,int img){
 
@@ -105,4 +123,6 @@ class SingleRow{
 
     }
 
+
 }
+

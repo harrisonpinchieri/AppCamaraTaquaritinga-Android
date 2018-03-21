@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.camarataquaritinga.projeto.camarataquaritinga.fragments.EmailFragment"
+    android:id="@+id/email_fragment"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+        <TextView
+            android:text="E-mail será enviado para"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextEmail"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/secondary_text_default_material_light"
+            android:hint="E-mail"
+            android:editable="false"
+            android:textSize="14dp"
+            android:enabled="false"
+            android:clickable="true" />
+        <TextView
+            android:text="Assunto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextSubject"
+            android:textColor="@android:color/black"
+            android:hint="Digite o Assunto"
+            android:textColorHint="@color/secondary_text_default_material_light"
+            android:textSize="15dp" />
+        <TextView
+            android:text="Mensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+        <EditText
+            android:lines="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextMessage"
+            android:hint="Digite sua menssagem"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/secondary_text_default_material_light"
+            android:textSize="15dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSend"
+            android:text="Enviar"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/branco"
+            android:textColorHighlight="@color/colorPrimaryDark" />
+    </LinearLayout>
+</FrameLayout>

@@ -11,6 +11,7 @@ import android.text.Spanned;
 import android.text.style.ImageSpan;
 
 import com.camarataquaritinga.projeto.camarataquaritinga.R;
+import com.camarataquaritinga.projeto.camarataquaritinga.fragments.EmailFragment;
 import com.camarataquaritinga.projeto.camarataquaritinga.fragments.HomeFragment;
 import com.camarataquaritinga.projeto.camarataquaritinga.fragments.TvcamaraFragment;
 
@@ -42,9 +43,14 @@ public class TabsAdapter  extends FragmentStatePagerAdapter{
 
             case 0:
                 fragment = new HomeFragment();
+
                 break;
             case 1:
                 fragment  = new TvcamaraFragment();
+                break;
+            case 2:
+
+                fragment = new EmailFragment();
                 break;
 
 
