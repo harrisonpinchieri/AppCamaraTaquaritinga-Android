@@ -5,10 +5,53 @@
     tools:context="com.camarataquaritinga.projeto.camarataquaritinga.fragments.TvcamaraFragment">
 
 
-    <Button
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:id="@+id/videoViewStreamingID"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_play_circle_outline"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
-        android:layout_gravity="center" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Programação"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginBottom="54dp"
+        android:layout_above="@+id/videoViewStreamingID"
+        android:layout_centerHorizontal="true" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="Segunda-feira"
+           android:id="@+id/textView4"
+           android:layout_above="@+id/videoViewStreamingID"
+           android:layout_centerHorizontal="true" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:text="19:00 até 22:30"
+           android:id="@+id/textView6"
+           android:layout_below="@+id/videoViewStreamingID"
+           android:layout_marginTop="44dp"
+           android:layout_alignLeft="@+id/textView3"
+           android:layout_alignStart="@+id/textView3"
+           android:layout_alignRight="@+id/textView3"
+           android:layout_alignEnd="@+id/textView3" />
+
+
+   </RelativeLayout>
 </FrameLayout>
