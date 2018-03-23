@@ -48,6 +48,8 @@ public class LoginActivity extends AppCompatActivity {
     private Usuario usuario;
     private FirebaseAuth autenticacao;
 
+
+
     private DatabaseReference referenciaFirebase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,13 +115,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 dialog.show();
 
-
-
-
-
-
-
-
             }
         });
 
@@ -146,10 +141,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
 
-
-
-
-
             }
         });
 
@@ -168,9 +159,6 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-
-
-
 
     }
 
@@ -256,8 +244,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-
-
     public void validarLogin(){
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
@@ -298,9 +284,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
             });
-
-
-
         }
 
     private void checarEmailVerificado() {

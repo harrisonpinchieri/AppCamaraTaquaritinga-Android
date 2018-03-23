@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CamaraTaquaritinga</string>
+    <string name="app_name">CâmaraTq</string>
     <string name="botao_login_entrar">Entrar</string>
     <string name="texto_cadastro">Não é cadastrado? Cadastre-se aqui!</string>
     <string name="botao_cadastrar_usuario">Cadastrar</string>

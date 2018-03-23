@@ -30,10 +30,6 @@ public class EmailFragment extends Fragment   implements View.OnClickListener{
     Button buttonSend;
     TextView txt_contador;
 
-
-
-
-
     public EmailFragment() {
         // Required empty public constructor
     }
@@ -45,10 +41,6 @@ public class EmailFragment extends Fragment   implements View.OnClickListener{
 
 
         View view = inflater.inflate(R.layout.fragment_email,container,false);
-
-
-
-
 
             //Initializing the views
             txt_contador  = (TextView) view.findViewById(R.id.txt_contador);
@@ -94,8 +86,6 @@ public class EmailFragment extends Fragment   implements View.OnClickListener{
 
         FirebaseUser user =  FirebaseAuth.getInstance().getCurrentUser();
 
-
-
         String nome = user.getDisplayName();
         String Email= user.getEmail();
 
@@ -121,10 +111,6 @@ public class EmailFragment extends Fragment   implements View.OnClickListener{
 
             alert("Por favor, preencha todos os campos.");
         }
-
-
-
-
     }
 
     private void alert(String s) {

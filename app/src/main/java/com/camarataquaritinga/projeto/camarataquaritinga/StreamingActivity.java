@@ -30,7 +30,7 @@ public class StreamingActivity extends AppCompatActivity {
         setContentView(webView);
         webView.loadUrl("https://player.jmvstream.com/6TkFNb3J9igpAQDq1LLvkmrCVKKv0h");
 
-
+        //habilita javascript
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 

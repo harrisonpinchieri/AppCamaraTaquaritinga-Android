@@ -28,16 +28,10 @@ public class MainActivity extends AppCompatActivity  {
     private ViewPager viewPager;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
@@ -61,12 +55,6 @@ public class MainActivity extends AppCompatActivity  {
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this,R.color.branco));
         slidingTabLayout.setViewPager(viewPager);
-
-
-
-
-
-
 
 
     }
