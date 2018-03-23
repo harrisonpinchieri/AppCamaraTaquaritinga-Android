@@ -33,9 +33,9 @@ public class ListaVereadoresAdapter extends BaseAdapter {
         String[] email = res.getStringArray(R.array.Email);
         int[] img ={R.drawable.item_presidente_1,R.drawable.item_vicepresidente_2,R.drawable.item_1secretario_3,R.drawable.item_2secretario_4,R.drawable.item_vereador_5,
                 R.drawable.item_vereador_6,R.drawable.item_vereador_7,R.drawable.item_vereador_8,R.drawable.item_vereador_9,R.drawable.item_vereador_10,
-                R.drawable.item_vereador_11,R.drawable.item_vereador_12,R.drawable.item_vereador_13,R.drawable.item_vereador_14,R.drawable.item_vereador_15};
+                R.drawable.item_vereador_11,R.drawable.item_vereador_12,R.drawable.item_vereador_13,R.drawable.item_vereador_14,R.drawable.item_vereador_15,R.drawable.item_ouvidoria};
 
-        for(int i=0;i<15;i++){
+        for(int i=0;i<16;i++){
 
             list.add(new SingleRow(titulo[i],nome[i],partido[i],email[i],img[i]));
         }

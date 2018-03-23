@@ -5,15 +5,13 @@
     android:layout_height="match_parent"
 
 
+
     tools:context="com.camarataquaritinga.projeto.camarataquaritinga.StreamingActivity">
 
-    <VideoView
+    <WebView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/videoViewStreamingID"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentStart="false" />
+        android:id="@+id/webViewId"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

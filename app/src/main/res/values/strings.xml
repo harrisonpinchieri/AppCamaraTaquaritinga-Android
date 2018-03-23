@@ -28,6 +28,7 @@
         <item>Vereador</item>
         <item>Vereador</item>
         <item>Vereador</item>
+        <item>Ouvidoria</item>
     </string-array>
 
     <string-array name="Nome">
@@ -47,6 +48,7 @@
         <item>Aparecido Carlos Gonçalves</item>
         <item>Oswado Peretti Neto</item>
         <item>Valdecir Conceição Zacarias</item>
+        <item>Câmara de Taquaritinga</item>
 
     </string-array>
 
@@ -67,6 +69,7 @@
         <item>PPS</item>
         <item>PMDB</item>
         <item>PSB</item>
+        <item>--</item>
 
     </string-array>
 
@@ -88,6 +91,7 @@
         <item>cidobolivar@camarataquaritinga.sp.gov.br</item>
         <item>wadinho@camarataquariinga.sp.gov.br</item>
         <item>valcir@camarataquaritinga.sp.gov.br</item>
+        <item>ouvidoria@camarataquaritinga.sp.gov.br</item>
 
 
     </string-array>

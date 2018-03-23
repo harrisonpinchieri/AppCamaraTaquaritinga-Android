@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email;
     private EditText senha;
     private Button   botaoLogar;
+    private ImageView _img_BtnTvCamaraId;
 
     private FirebaseAuth mFirebaseAuth;
     private LoginButton mLoginButton;
@@ -55,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
 
         verificarUsuarioLogado();
 
-
+        _img_BtnTvCamaraId = (ImageView) findViewById(R.id._img_BtnTvCamaraId);
         email =     (EditText) findViewById(R.id.edit_login_email);
         senha =     (EditText) findViewById(R.id.edit_login_senha);
         botaoLogar= (Button)   findViewById(R.id.bt_login);
@@ -111,6 +113,13 @@ public class LoginActivity extends AppCompatActivity {
 
                 dialog.show();
 
+
+
+
+
+
+
+
             }
         });
 
@@ -148,6 +157,17 @@ public class LoginActivity extends AppCompatActivity {
         inicializarComponente();
         inicializarFirebaseCallback();
         clickButton();
+
+
+        _img_BtnTvCamaraId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(LoginActivity.this,StreamingActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
 

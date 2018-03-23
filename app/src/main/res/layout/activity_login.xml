@@ -92,7 +92,7 @@
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="@dimen/facebookGoogle_altura"
-        android:id="@+id/imageView"
+        android:id="@+id/_img_BtnTvCamaraId"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/streamlogo" />

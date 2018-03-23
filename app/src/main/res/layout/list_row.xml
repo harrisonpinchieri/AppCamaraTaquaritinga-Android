@@ -14,7 +14,7 @@
             android:layout_height="100dp"
             android:id="@+id/img_FotoVereador"
             android:layout_gravity="left|top"
-            android:background="@drawable/item_presidente_1" />
+             />
 
         <TextView
             android:layout_width="fill_parent"

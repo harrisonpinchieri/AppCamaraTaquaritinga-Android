@@ -1,9 +1,11 @@
 package com.camarataquaritinga.projeto.camarataquaritinga;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.MediaController;
+import android.view.Window;
+import android.view.WindowManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.VideoView;
 
 public class StreamingActivity extends AppCompatActivity {
@@ -11,28 +13,26 @@ public class StreamingActivity extends AppCompatActivity {
 
     VideoView videoView;
 
+
     String videoURL ="https://player.jmvstream.com/6TkFNb3J9igpAQDq1LLvkmrCVKKv0h";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_streaming);
 
 
-        videoView = (VideoView) findViewById(R.id.videoViewStreamingID);
-
-        MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView);
-
-        Uri uri = Uri.parse(videoURL);
 
 
-       videoView.setMediaController(mediaController);
+        WebView webView = new WebView(this);
+        setContentView(webView);
+        webView.loadUrl("https://player.jmvstream.com/6TkFNb3J9igpAQDq1LLvkmrCVKKv0h");
 
 
-        videoView.setVideoURI(uri);
-      //  videoView.requestFocus();
-        videoView.start();
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
 
     }
