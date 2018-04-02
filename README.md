@@ -4,7 +4,7 @@ Projeto desenvolvido individualmente.
 
 Desafio e-camara 
 
-aplicativo vencedor em 1° lugar do desafio da Fatec Taquaritinga 
+Aplicativo vencedor em 1° lugar do desafio da Fatec Taquaritinga 
 
 ![](img/desafio.jpg)
 
